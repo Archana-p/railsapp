@@ -1,0 +1,30 @@
+<div class ="container">
+<h4>Signup</h4>
+
+
+  <!-- <tr>
+    <td>Title</td>
+     <td> &nbsp;</td>
+  
+   
+    <td>Description</td>
+      <td> &nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr> -->
+
+<% @users.each do |user| %>
+  <div class="panel panel-default">
+    <div class="panel-title"> Username = <%= user.name%></div>
+    <div class= "panel-title"> Email =   <%= user.email%></div>
+
+  </div>  
+<% end %>
+
+
+
+</div>
+<br />
+
+<%#= link_to 'New Post', new_post_path %>

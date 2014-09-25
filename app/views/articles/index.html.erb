@@ -1,0 +1,33 @@
+<div class = "text-center">
+<h1>Articles</h1>
+</div>
+<div class = "container">
+
+  <!-- <tr>
+    <td>Title</td>
+     <td> &nbsp;</td>
+  
+   
+    <td>Description</td>
+      <td> &nbsp;</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr> -->
+
+<% @articles.each do |article| %>
+  <div class="panel panel-default">
+    <div class="panel-heading">  <%=  link_to article.title ,article_path(article) %></div>
+
+    <div class="panel-body">
+      <%= article.description.truncate(200) %>
+    </div>  
+  </div>  
+<% end %>
+
+
+
+</div>
+<br />
+
+<%#= link_to 'New Post', new_post_path %>

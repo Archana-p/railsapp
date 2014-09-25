@@ -1,0 +1,21 @@
+<div class ="text-center">
+<h1>Article </h1></div>
+
+
+
+  <div class="panel panel-default">
+ <div class="panel-heading"><%=  link_to @article.title ,article_path(@article) %></div>
+  
+  <div class="panel-body">
+  <%= @article.description %> </div>
+
+  </div>
+   
+    <%= render  partial: 'articles/comments' ,as: :comment %>
+
+
+
+  <%= render :partial=>"/comments/form"%>
+
+
+

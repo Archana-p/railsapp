@@ -1,0 +1,30 @@
+	
+<div class="container">
+
+  
+   
+   	 <% @comments.each_with_index do |comment, index| %>
+   	<div class= "panel panel-default"> 
+    <div class="panel-heading">
+      <% if is_admin? %>
+      <%= index %>
+     <%= comment.name %>
+     <%= link_to "Delete", article_comment_path(id: comment.id,article_id: @article.id), :method => "delete" unless comment.new_record?%> 
+     <%else %>
+      <%= index %>
+     <%= comment.name %>
+     <%end%>
+    </div>
+    
+     <div class="panel-body">
+      <%= comment.comment %>
+     </div> 
+    
+    </div/>
+ 
+    <% end %>
+
+  
+
+
+  </div>  

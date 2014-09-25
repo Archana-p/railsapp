@@ -1,0 +1,25 @@
+<%= @article.errors.full_messages.join(", ") if @article.errors.present?%>
+<%= form_for @article , html: { class: "form-horizontal" } do |f| %>
+ <%#= f.error_messages %>
+<div class= "text-center">
+<h1> Article </h1></div>
+<div class="form-group", "text-center">
+    <label for="inputtitle" class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-6">
+    	<%=  f.text_field :title , class: "form-control" ,id: "inputtitle"%>
+    </div>
+  </div>
+  <div class="form-group", "text-center">
+    <label for="inputdescription" class="col-sm-2 control-label">Description</label>
+    <div class="col-sm-6">
+    	<%=  f.text_area :description , class: "form-control" ,id: "inputdescription"%>
+    </div>
+  </div>
+  <div class = "form-group","text-center">
+<div class="col-sm-offset-2 col-sm-10">
+      
+      <%= f.submit "create Article" , class: "btn-btn-default" %>
+    </div>
+  </div>
+ <%end %>
+
